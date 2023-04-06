@@ -1,4 +1,5 @@
 import networkx as nx
+import numpy as np
 
 def k(spectrum, threshold = 0.9):
     total = sum(abs(spectrum))
@@ -12,8 +13,8 @@ def k(spectrum, threshold = 0.9):
     return len(spectrum)
 
 def ev_method(G1,G2,threshold = 0.9):
-    l1 = nx.spectrum.laplacian_spectrum(G1)
-    l2 = nx.spectrum.laplacian_spectrum(G2)
+    l1 = np.array(sorted(nx.spectrum.laplacian_spectrum(G1)))
+    l2 = np.array(sorted(nx.spectrum.laplacian_spectrum(G2)))
     k1 = k(l1)
     k2 = k(l2)
     k = min(k1, k2,threshold)
