@@ -8,6 +8,6 @@ Parameters:
 
 *G1, G2*: graphs to compare
 
-*threshold*: minimum of energy to be covered by the eigenvalues (default 90%). Small values are ommitted.
+*threshold*: minimum of energy to be covered by the eigenvalues (default 90%). Small values are omitted.
 
 ***returns:*** distance score (between 0 and inf).
